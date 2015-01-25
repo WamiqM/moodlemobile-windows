@@ -157,6 +157,9 @@
 <script type="text/template" id="menu_template">
 <header>
     <div class="media">
+        <div class="logo">
+             <img src="img/logo.png" width="150px" height="150px">
+        </div>
         <div class="refresh app-ico">
             <a href="#refresh">
                 <img width="16" height="16" src="img/reload.png" border="0">
@@ -164,10 +167,11 @@
         </div>
         <div class="img">
             <img src="<%= MM.util.getMoodleFilePath(user.profileimageurl) %>" border="0">
-        </div>
-        <div class="bd">
-            <h1><%= user.fullname %></h1>
-        </div>
+        
+            <div class="bd">
+                <h1><%= user.fullname %></h1>
+            </div>
+        </div>    
     </div>
 </header>
 
@@ -324,7 +328,7 @@
 
 <script type="text/template" id="add-site_template">
 <h1 class="app-ico">
-    <img src="img/login-logo.png" alt="Moodle">
+    <img src="img/logo.png" alt="Moodle">
 </h1>
 <form action="" novalidate>
     <div id="login-details">
@@ -353,7 +357,7 @@
 
 <script type="text/template" id="manage-accounts_template">
 <h1 class="app-ico">
-    <img src="img/login-logo.png" alt="Moodle">
+    <img src="img/logo.png" alt="Moodle">
 </h1>
 <% _.each(sites, function(site) { %>
     <div class="accounts">
